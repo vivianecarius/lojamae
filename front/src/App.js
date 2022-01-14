@@ -1,11 +1,18 @@
-import logo from './logo.svg'
+/* eslint-disable no-unused-vars */
+import react, { useEffect } from 'react'
 import './App.css'
+import Main from './layout/main'
+import Marketing from './layout/marketing'
 
 function App() {
+  const showMarketing = true
+  useEffect(() => {}, [showMarketing])
+
   return (
-    <div className="main">
-      <h1 className="content">Hello world</h1>
-    </div>
+    <>
+      {showMarketing || <Marketing />}
+      <Main />
+    </>
   )
 }
 
